@@ -83,3 +83,17 @@ production:
   database: rails_watch_list_2_production
   username: rails_watch_list_2
   password: <%= ENV['RAILS_WATCH_LIST_2_DATABASE_PASSWORD'] %>
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: rails-watch-list_development
+
+test:
+  <<: *default
+  database: rails-watch-list_test
