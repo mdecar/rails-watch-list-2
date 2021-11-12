@@ -1,1 +1,34 @@
-@import "bootstrap/scss/bootstrap"
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+  .row {
+  content: "";
+  display: table;
+  clear: both;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex; /* or inline-flex */
+  position: center;
+
+}

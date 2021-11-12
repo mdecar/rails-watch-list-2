@@ -1,0 +1,36 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i2.wp.com/www.dasym.com/wp-content/uploads/2017/07/Cinema-Image-by-Alexandre-Chassignon-on-Flickr.jpg?fit=2304%2C1728&ssl=1);">
+  <div class="container">
+    <h1> <%= @list.name %> </h1>
+
+    <%= link_to "create", new_list_bookmark_path(@list) %>
+  </div>
+</div>
+
+<div class="container">
+ <div class="row">
+  <%# <div class="column"> %>
+<div class="card-trip" id="card">
+<% @list.movies.each do |movie| %>
+ <img src="<%= movie.poster_url %>">
+  <div class="card-trip-infos">
+    <div>
+
+      <h2><%= movie.title %></h2>
+      <p><%= movie.overview %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= movie.rating %></h2>
+
+  </div>
+
+<% end %>
+</div>
+<%# </div> %>
+  </div>
+</div>
+
+
+
+
+
+<%= link_to "create", new_list_bookmark_path(@list) %>
